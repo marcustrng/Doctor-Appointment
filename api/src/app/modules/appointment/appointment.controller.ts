@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import catchAsync from "../../../shared/catchAsync";
 import sendResponse from "../../../shared/sendResponse";
 import { AppointmentService } from "./appointment.service";
+// @ts-ignore
 import { Appointments, Patient } from "@prisma/client";
 
 const createAppointment = catchAsync(async (req: Request, res: Response) => {

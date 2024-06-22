@@ -13,7 +13,7 @@ import moment from "moment";
 import { EmailtTransporter } from "../../../helpers/emailTransporter";
 import * as path from "path";
 import config from "../../../config";
-const { v4: uuidv4 } = require('uuid');
+import {v4 as uuidv4} from 'uuid';
 
 const sendVerificationEmail = async (data: Doctor) => {
     const currentUrl = process.env.NODE_ENV === 'production' ? config.backendLiveUrl : config.backendLocalUrl;
