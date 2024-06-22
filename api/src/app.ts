@@ -6,7 +6,11 @@ import ApiError from './errors/apiError';
 import router from './app/routes';
 import config from './config';
 
+import { PrismaClient } from '@prisma/client'
+import './seed'
+
 const app: Application = express();
+const prisma = new PrismaClient()
 
 app.use(cors());
 app.use(CookieParser());
